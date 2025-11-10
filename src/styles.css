@@ -1,0 +1,94 @@
+.leaflet-left {
+  display: none;
+}
+
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#search-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: white;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  gap: 5px;
+}
+
+input,
+button {
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+#leaflet-map {
+  height: 100vh;
+}
+
+#search-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: white;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  /* Aligne input et bouton sur une seule ligne */
+  align-items: center;
+  gap: 5px;
+  width: 90%;
+  /* Largeur adaptative */
+  max-width: 400px;
+  /* Ne dépasse pas cette largeur sur grand écran */
+}
+
+#search-container input {
+  flex: 1;
+  /* Permet à l'input de prendre tout l'espace disponible */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#search-container button {
+  padding: 8px 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  /* Taille fixe pour éviter les sauts */
+}
+
+/* Media query pour les petits écrans */
+@media screen and (max-width: 480px) {
+  #search-container {
+    width: 90%;
+    max-width: 90%;
+  }
+}

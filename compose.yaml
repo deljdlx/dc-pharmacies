@@ -1,0 +1,21 @@
+services:
+  paris-toilets:
+    container_name: paris-toilets
+    build: ./compose
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - "./src:/var/www/html"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.paris-toilets.rule=Host(\"${DOMAIN}\")"
+      - "traefik.http.routers.paris-toilets.entrypoints=websecure"
+      - "traefik.http.routers.paris-toilets.tls.certresolver=myresolver"
+    networks:
+      web:
+networks:
+  web:
+    name: web
+    external: true

@@ -15,6 +15,7 @@ services:
       - "traefik.http.routers.pharmacies.tls.certresolver=myresolver"
     networks:
       web:
+      mariadb:
 networks:
   web:
     name: web

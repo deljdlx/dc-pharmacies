@@ -1,9 +1,6 @@
 <?php
+require_once __DIR__ . '/configuration.php';
 
-$mysqlHost = 'db';
-$mysqlUser = 'root';
-$mysqlPass = 'rootpass';
-$mysqlDb   = 'rpps';
 $pdo = new PDO("mysql:host=$mysqlHost;dbname=$mysqlDb;charset=utf8", $mysqlUser, $mysqlPass);
 
 
